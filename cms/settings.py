@@ -1,19 +1,16 @@
 from pathlib import Path
 import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+import environ
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'vwu&@d#06ilsg!)!4zrjjux=xn(@0!x(beu@3l5vgy2ox&via5'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+ALLOWED_HOSTS = ['https://ecfcrm.herokuapp.com', 'localhost', '127.0.0.1', '127.0.0.1:8000']
 
 
 # Application definition
@@ -123,8 +120,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'artururoda@googlemail.com'
-EMAIL_HOST_PASSWORD = 'hoexhwcpttgxhpxu'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
-#os.environ.get('EMAIL_USER')
-#os.environ.get('EMAIL_PASS')
+
+
+
