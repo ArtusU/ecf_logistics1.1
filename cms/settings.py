@@ -10,7 +10,7 @@ DEBUG = True
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-ALLOWED_HOSTS = ['https://ecfcrm.herokuapp.com', 'localhost', '127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['ecfcrm.herokuapp.com', 'localhost', '127.0.0.1', '127.0.0.1:8000']
 
 
 # Application definition
