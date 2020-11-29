@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>ECF | Logistics</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'orders/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'orders/css/style.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'orders/images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'orders/images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'orders/images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'orders/images/site.webmanifest' %}">
+
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+</head>
+
+<body>
+
+    {% include 'orders/navbar.html' %}
+
+    <div>
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+
+    {% block content %}
+
+    {% endblock%} 
+
+    {% include 'orders/footer.html' %}
+    
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'orders/js/bootstrap.min.js' %}"></script>
+
+</html>

@@ -1,0 +1,42 @@
+{% extends "orders/main.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center"> User Account <small>Please Login</small></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <form method="POST" action="" class="well">
+            {% csrf_token %}
+              <div class="form-group">
+              {{ form|crispy }}
+              </div>
+            
+              <div class="d-flex justify-content-center mt-3 login_container">
+				 				<input class="btn login_btn" type="submit" value="Login">
+				   			</div>
+            </form>
+            
+				    <div class="mt-4">
+					    <div class="d-flex justify-content-center links">
+						    Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+				      </div>
+              <div class="d-flex justify-content-center links">
+						    Forgot password? <a href="{% url 'password_reset' %}" class="ml-2">Reset Here</a>
+				      </div>
+				    </div>
+				  </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
