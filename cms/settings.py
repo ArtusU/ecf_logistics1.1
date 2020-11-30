@@ -4,10 +4,11 @@ import environ
 import django_heroku
 
 
-
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY = 'vwu&@d#06ilsg!)!4zrjjux=xn(@0!x(beu@3l5vgy2ox&via5'
 
-DEBUG = True
+DEBUG = False
+#DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
