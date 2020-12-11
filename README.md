@@ -14,11 +14,9 @@ After Login the referrer can see the list of the previously referred participant
 
 ![image](https://drive.google.com/uc?export=view&id=1SGEWCSW2JrNsn0FZSzi5-UCf5_zAyO8L)
 
-
 The referrer can also edit their own details. 
 
 ![image](https://drive.google.com/uc?export=view&id=1exMVCAJUbrgm3pkT6BwAac2kwFkCRnpV)
-
 
 The referrer can place an order by filling the form with participants' details 
 
@@ -28,9 +26,7 @@ The referrer can place an order by filling the form with participants' details
 ### The Warehouse Admin - admin user.
 The local charity's Warehouse Admin has the full view of the received orders.  
 
-
 ![image](https://drive.google.com/uc?export=view&id=19NKeWV6QfMZYZyY_BphR3hd9MnuZYi_E)
-
 
 In the process of organising deliveries, the admin can stage the orders assigning: 
 * status (approved, pending, out of delivery, delivered),
@@ -39,14 +35,12 @@ In the process of organising deliveries, the admin can stage the orders assignin
 
 ![image](https://drive.google.com/uc?export=view&id=1tHvM8reN9SZVT9Bh9mDinr5BAYioGDYe)
 	
-  
 The Admin has full sorting functionality available:
 * by the referrer surname and institution,
 * by the recipient full name,
 * by the product, order status, delivery day, and run. 
 
 ![image](https://drive.google.com/uc?export=view&id=1IJSsMD2wzHgJlB1_nkYyuP8Ct4vbKhN5)
-
 
 ### The driver - staff user.
 The five drivers can log in to the service. The dashboard shows all the orders staged by the Warehouse Admin as 'out of delivery'.  The drivers can sort out the run (from 1 to 5) and delivery day. If needed they have full access to the order details.
