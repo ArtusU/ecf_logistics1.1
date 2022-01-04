@@ -33,8 +33,8 @@ class Delivery_Address(models.Model):
     address_line        = models.CharField(max_length=50)
     post_code           = models.CharField(max_length=10)
     directions          = models.CharField(max_length=200, blank=True)
-    latitude            = models.IntegerField()
-    longitude           = models.IntegerField()
+    latitude            = models.IntegerField(null=True, blank=True)
+    longitude           = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.address_line
