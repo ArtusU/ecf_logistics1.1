@@ -38,6 +38,15 @@ class Delivery_Address(models.Model):
 
     def __str__(self):
         return self.address_line
+    
+    def save(self, *args, **kwargs):
+        BASE_URL = "http://api.postcodes.io/postcodes/"
+        data_str = requests.get(BASE_URL + postcode).text
+        resuslt_dict = json.loads(data_str)
+        result = resuslt_dict["result"]
+        self.latitude = result["latitude"]
+        self.longitude = result["longitude"]
+        return super(Address, self).save(*args, **kwargs)
 
 
 class Product_Tag(models.Model):
