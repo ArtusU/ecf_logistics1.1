@@ -1,6 +1,6 @@
-# ecf_logistics1.1
+# [ecf_logistics1.1](https://ecf-logistc.herokuapp.com/)
 
-This Django App allows to collect the orders by the Users and display and organise them by the Admin.
+ECF-Logistic App allows to collect the orders, display the addresses on a Google map and stage the status of the orders. API postcodes.io and GoogleMap.
 
 ![image](https://drive.google.com/uc?export=view&id=1fyMXyetPqv-ume2-R9H_Z5NpjQM5mtxY)
 
@@ -47,4 +47,4 @@ The five drivers can log in to the service. The dashboard shows all the orders s
 
 ![image](https://drive.google.com/uc?export=view&id=1PVg3j3lKFkInu1oRc_-zbpisymRUN4NB)
 
-https://ecfcrm.herokuapp.com/
+Visit: https://ecf-logistc.herokuapp.com
