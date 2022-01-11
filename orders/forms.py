@@ -12,6 +12,12 @@ class AddressForm(ModelForm):
         model = Delivery_Address
         fields = '__all__'
         exclude = ['recipient', 'latitude', 'longitude']
+        
+class UpdateAddressForm(ModelForm):
+    class Meta:
+        model = Delivery_Address
+        fields = '__all__'
+        exclude = ['recipient']
 
 class OrderForm(ModelForm):
     class Meta:

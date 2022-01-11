@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from orders.filters import OrderFilter, DriverOrderFilter
 from .models import Order
-from orders.forms import OrderForm, RecipientForm, AddressForm, StatusOrderForm
+from orders.forms import OrderForm, RecipientForm, AddressForm, UpdateAddressForm, StatusOrderForm
 
 
 
@@ -105,13 +105,13 @@ def orderUpdate(request, pk):
     order = Order.objects.get(id=pk)
     ord_form = StatusOrderForm(instance=order)
     recipient_form = RecipientForm(instance=order.recipient)
-    address_form = AddressForm(instance=order.delivery_address)
+    address_form = UpdateAddressForm(instance=order.delivery_address)
 
     if request.method == 'POST':
         #form = OrderForm(request.POST, instance=order)
         ord_form = StatusOrderForm(request.POST, instance=order)
         recipient_form = RecipientForm(request.POST, instance=order.recipient)
-        address_form = AddressForm(request.POST, instance=order.delivery_address)
+        address_form = UpdateAddressForm(request.POST, instance=order.delivery_address)
         
         if recipient_form.is_valid() and address_form.is_valid() and ord_form.is_valid():
             recipient_form.save()
