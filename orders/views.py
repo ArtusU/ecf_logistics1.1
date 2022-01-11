@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from orders.filters import OrderFilter, DriverOrderFilter
 from .models import Order
@@ -35,6 +36,7 @@ def adminOrders(request):
         'thursday_orders': thursday_orders,
         'friday_orders': friday_orders,
         'myFilter': myFilter,
+        'google_map_api_key': settings.GOOGLE_MAP_API_KEY
     }
     return render(request, 'orders/admin_orders.html', context)
 

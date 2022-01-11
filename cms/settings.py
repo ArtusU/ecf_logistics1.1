@@ -2,14 +2,11 @@ from pathlib import Path
 import os
 import environ
 import django_heroku
+from decouple import config
 
 
-#SECRET_KEY = os.environ.get('SECRET_KEY')
-SECRET_KEY = 'vwu&@d#06ilsg!)!4zrjjux=xn(@0!x(beu@3l5vgy2ox&via5'
-
-DEBUG = True
-#DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
-
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ALLOWED_HOSTS = ['ecfcrm.herokuapp.com', 'localhost', '127.0.0.1', '127.0.0.1:8000']
@@ -130,6 +127,9 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 
 django_heroku.settings(locals())
+
+
+GOOGLE_MAP_API_KEY = config('GOOGLE_MAP_API_KEY')
 
 
 
