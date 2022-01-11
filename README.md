@@ -1,8 +1,8 @@
-# [ecf_logistics1.1](https://ecf-logistc.herokuapp.com/)
+# [ECF-Logistic](https://ecf-logistc.herokuapp.com/)
 
 ECF-Logistic App allows to collect the orders, display the addresses on a Google map and stage the status of the orders. API postcodes.io and GoogleMap.
 
-![image](https://drive.google.com/uc?export=view&id=1fyMXyetPqv-ume2-R9H_Z5NpjQM5mtxY)
+![image](https://drive.google.com/uc?export=view&id=1z-FHF0_hT7tkE0wr46SASJRM1xu2Fszz)
 
 ### The referrer - default user
 The referrer can sign up to the service themselves or could be registered by authorised institution for example Local Council. 
