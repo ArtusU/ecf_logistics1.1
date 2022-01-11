@@ -11,7 +11,7 @@ class AddressForm(ModelForm):
     class Meta:
         model = Delivery_Address
         fields = '__all__'
-        exclude = ['recipient']
+        exclude = ['recipient', 'latitude', 'longitude']
 
 class OrderForm(ModelForm):
     class Meta:

@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+import requests
+import json
 
 
 class Referrer(models.Model):
@@ -33,20 +35,23 @@ class Delivery_Address(models.Model):
     address_line        = models.CharField(max_length=50)
     post_code           = models.CharField(max_length=10)
     directions          = models.CharField(max_length=200, blank=True)
-    latitude            = models.IntegerField(null=True, blank=True)
-    longitude           = models.IntegerField(null=True, blank=True)
+    latitude            = models.FloatField(null=True, blank=True)
+    longitude           = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return self.address_line
     
     def save(self, *args, **kwargs):
-        BASE_URL = "http://api.postcodes.io/postcodes/"
-        data_str = requests.get(BASE_URL + postcode).text
-        resuslt_dict = json.loads(data_str)
-        result = resuslt_dict["result"]
-        self.latitude = result["latitude"]
-        self.longitude = result["longitude"]
-        return super(Address, self).save(*args, **kwargs)
+        try:
+            BASE_URL = "http://api.postcodes.io/postcodes/"
+            data_str = requests.get(BASE_URL + self.post_code).text
+            resuslt_dict = json.loads(data_str)
+            result = resuslt_dict["result"]
+            self.latitude = result["latitude"]
+            self.longitude = result["longitude"]
+        except:
+            pass
+        return super(Delivery_Address, self).save(*args, **kwargs)
 
 
 class Product_Tag(models.Model):
