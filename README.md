@@ -1,6 +1,6 @@
 # [ECF-Logistic](https://ecf-logistc.herokuapp.com/)
 
-The ECF-Logistic app is a powerful tool designed to simplify the order management process. 
+The ECF-Logistic app is a straightforward web service designed to simplify the order management process. 
 
 The system empowers administrators to efficiently manage their logistics operations by enabling them to examine order details in real time from the dashboard. With this feature, admins can get a clear overview of all orders, including their status, customer information, and delivery location.
 
